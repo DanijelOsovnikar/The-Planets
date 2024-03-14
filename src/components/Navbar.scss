@@ -1,0 +1,70 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+  .logo {
+    text-decoration: none;
+    @include h2;
+    color: $white;
+  }
+}
+
+ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0 30px;
+
+  @for $i from 1 to length($colors) {
+    li:nth-of-type(#{$i}) a::before {
+      $color-from-list: nth($colors, $i);
+      background-color: $color-from-list;
+    }
+  }
+
+  li {
+    padding: 10px;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      @include h4;
+      font-weight: 400;
+      font-size: 20px;
+      color: $navlinkCOlor;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 8px;
+        position: absolute;
+        top: -45px;
+        transform: translateY(-10px);
+        transition: transform 0.5s ease;
+      }
+
+      &:hover {
+        color: $white;
+
+        &::before {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
