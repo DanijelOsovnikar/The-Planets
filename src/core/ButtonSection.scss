@@ -11,7 +11,35 @@
     margin: 10px 0;
   }
 
-  input[type="radio"]:checked + label {
+  input[type="radio"]:checked + label.cyan {
     background-color: $cyan;
+  }
+
+  input[type="radio"]:checked + label.yellow {
+    background-color: $yellow;
+  }
+
+  input[type="radio"]:checked + label.purple {
+    background-color: $purple;
+  }
+
+  input[type="radio"]:checked + label.redOrange {
+    background-color: $redOrange;
+  }
+
+  input[type="radio"]:checked + label.red {
+    background-color: $red;
+  }
+
+  input[type="radio"]:checked + label.orange {
+    background-color: $orange;
+  }
+
+  input[type="radio"]:checked + label.green {
+    background-color: $green;
+  }
+
+  input[type="radio"]:checked + label.blue {
+    background-color: $blue;
   }
 }

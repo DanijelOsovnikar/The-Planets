@@ -1,6 +1,6 @@
 import "./ButtonSection.scss";
 
-export default function ButtonSection({ buttonChange }) {
+export default function ButtonSection({ buttonChange, colorName }) {
   const buttonHandler = (e) => {
     buttonChange(e.target.id);
   };
@@ -15,7 +15,7 @@ export default function ButtonSection({ buttonChange }) {
         defaultChecked
         hidden
       />
-      <label id="overview" htmlFor="overview">
+      <label className={colorName} id="overview" htmlFor="overview">
         <span>01</span>Overview
       </label>
       <input
@@ -25,7 +25,7 @@ export default function ButtonSection({ buttonChange }) {
         onClick={buttonHandler}
         hidden
       />
-      <label htmlFor="structure">
+      <label className={colorName} htmlFor="structure">
         <span>02</span>Internal Structure
       </label>
       <input
@@ -35,7 +35,7 @@ export default function ButtonSection({ buttonChange }) {
         onClick={buttonHandler}
         hidden
       />
-      <label htmlFor="geology">
+      <label className={colorName} htmlFor="geology">
         <span>03</span>Surface Geology
       </label>
     </div>

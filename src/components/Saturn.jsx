@@ -1,7 +1,51 @@
+import ImgSection from "../core/ImgSection";
+import ButtonSection from "../core/ButtonSection";
+import InfoSection from "../core/InfoSection";
+import TextArea from "../core/TextArea";
+import useSWR from "swr";
+import { useState } from "react";
+import "./Saturn.scss";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 export default function Saturn() {
+  const [state, setState] = useState("overview");
+  const [image, setImage] = useState("src/assets/planet-saturn.svg");
+  const [secondaryImage, setSecondaryImage] = useState(null);
+
+  const buttonStateHandler = (e) => {
+    setState(e);
+    if (e === "overview") {
+      setImage(planets[5].images.planet);
+      setSecondaryImage(null);
+    }
+    if (e === "structure") {
+      setImage(planets[5].images.internal);
+      setSecondaryImage(null);
+    }
+    if (e === "geology") {
+      setImage(planets[5].images.planet);
+      setSecondaryImage(planets[5].images.geology);
+    }
+  };
+
+  const {
+    data: planets,
+    error,
+    isValidating,
+  } = useSWR("src/data.json", fetcher);
+
+  if (error) return <div className="failed">failed to load</div>;
+  if (isValidating) return <div className="Loading">Loading...</div>;
+
   return (
     <div className="saturn">
-      <h1>Saturn</h1>
+      <ImgSection image={image} secondaryImage={secondaryImage} />
+      <div className="wrapper">
+        <TextArea planet={planets[5]} info={planets[5][state]} />
+        <ButtonSection buttonChange={buttonStateHandler} colorName={"orange"} />
+      </div>
+      <InfoSection planet={planets[5]} />
     </div>
   );
 }
