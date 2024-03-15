@@ -1,0 +1,40 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+.textArea {
+  margin: 20px 0 10px 0;
+  background: transparent;
+  h1 {
+    @include h1;
+    color: $white;
+    background: transparent;
+  }
+
+  p {
+    @include p;
+    color: white;
+    background: transparent;
+    margin: 15px 10px 10px 0;
+  }
+  .source {
+    display: flex;
+    align-items: center;
+    span {
+      color: $sourceColor;
+      @include p;
+      margin: 0 8px 0 0;
+    }
+
+    .wikiLink {
+      color: $sourceColor;
+      text-decoration: underline;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .sourceImg {
+      margin: 0 8px;
+    }
+  }
+}

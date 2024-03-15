@@ -1,0 +1,29 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+.infoSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .cube {
+    color: white;
+    width: 230px;
+    height: 120px;
+    border: 1px solid $buttonBorderColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 15px;
+
+    h2 {
+      @include h2;
+    }
+
+    h4 {
+      @include h4;
+      text-transform: uppercase;
+      color: $sourceColor;
+    }
+  }
+}

@@ -6,6 +6,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #39394f;
 }
 
 nav {
@@ -39,32 +40,32 @@ ul {
 
   li {
     padding: 10px;
+  }
+}
 
-    a {
-      position: relative;
-      text-decoration: none;
-      @include h4;
-      font-weight: 400;
-      font-size: 20px;
-      color: $navlinkCOlor;
+a {
+  position: relative;
+  text-decoration: none;
+  @include h4;
+  font-weight: 400;
+  font-size: 20px;
+  color: $navlinkCOlor;
 
-      &::before {
-        content: "";
-        width: 100%;
-        height: 8px;
-        position: absolute;
-        top: -45px;
-        transform: translateY(-10px);
-        transition: transform 0.5s ease;
-      }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -50px;
+    transform: translateY(-10px);
+    transition: transform 0.5s ease;
+  }
 
-      &:hover {
-        color: $white;
+  &:hover {
+    color: $white;
 
-        &::before {
-          transform: translateX(0);
-        }
-      }
+    &::before {
+      transform: translateX(0);
     }
   }
 }

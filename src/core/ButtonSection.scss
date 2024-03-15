@@ -1,0 +1,17 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+.buttonSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    @include buttonWithHover;
+    margin: 10px 0;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $cyan;
+  }
+}
