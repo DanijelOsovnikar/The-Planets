@@ -9,6 +9,10 @@
   label {
     @include buttonWithHover;
     margin: 10px 0;
+
+    &::after {
+      content: none;
+    }
   }
 
   input[type="radio"]:checked + label.cyan {
@@ -53,5 +57,11 @@
 @media screen and (max-width: 550px) {
   .buttonSection {
     display: none;
+
+    label {
+      &::after {
+        content: "";
+      }
+    }
   }
 }
