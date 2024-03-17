@@ -1,5 +1,4 @@
 {
-  "homepage": "https://danijelosovnikar.github.io/The-Planets/",
   "name": "the-planets",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
