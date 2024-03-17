@@ -38,11 +38,7 @@ export default function Earth() {
     }
   };
 
-  const {
-    data: planets,
-    error,
-    isValidating,
-  } = useSWR("public/assets/data.json", fetcher);
+  const { data: planets, error, isValidating } = useSWR("data.json", fetcher);
 
   if (error) return <div className="failed">failed to load</div>;
   if (isValidating) return <div className="Loading">Loading...</div>;
