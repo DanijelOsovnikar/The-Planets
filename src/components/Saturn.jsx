@@ -11,7 +11,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Saturn() {
   const [state, setState] = useState("overview");
-  const [image, setImage] = useState("src/assets/planet-saturn.svg");
+  const [image, setImage] = useState("assets/planet-saturn.svg");
   const [secondaryImage, setSecondaryImage] = useState(null);
 
   const buttonStateHandler = (e) => {

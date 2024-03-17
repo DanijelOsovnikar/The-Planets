@@ -11,7 +11,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Earth() {
   const [state, setState] = useState("overview");
-  const [image, setImage] = useState("src/assets/planet-earth.svg");
+  const [image, setImage] = useState("assets/planet-earth.svg");
   const [secondaryImage, setSecondaryImage] = useState(null);
 
   const buttonStateHandler = (e) => {

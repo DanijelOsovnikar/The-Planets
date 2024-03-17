@@ -10,7 +10,7 @@ export default function TextArea({ planet, info }) {
         <a className="wikiLink" target="_blank" href={info.source}>
           Wikipedia
           <img
-            src="src/assets/icon-source.svg"
+            src="assets/icon-source.svg"
             alt="sourceImg"
             className="sourceImg"
           />

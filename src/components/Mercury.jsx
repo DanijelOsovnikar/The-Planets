@@ -11,7 +11,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Mercury() {
   const [state, setState] = useState("overview");
-  const [image, setImage] = useState("src/assets/planet-mercury.svg");
+  const [image, setImage] = useState("assets/planet-mercury.svg");
   const [secondaryImage, setSecondaryImage] = useState(null);
 
   const buttonStateHandler = (e) => {
