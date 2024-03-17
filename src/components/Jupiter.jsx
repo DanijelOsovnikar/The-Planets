@@ -42,7 +42,7 @@ export default function Jupiter() {
     data: planets,
     error,
     isValidating,
-  } = useSWR("../data.json", fetcher);
+  } = useSWR("public/assets/data.jsonjson", fetcher);
 
   if (error) return <div className="failed">failed to load</div>;
   if (isValidating) return <div className="Loading">Loading...</div>;
