@@ -1,0 +1,110 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+.linearButtons {
+  display: none;
+  width: 100%;
+  padding: 30px;
+  border-bottom: 1px solid $buttonBorderColor;
+}
+
+input[type="radio"]:checked + label.cyan {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $cyan;
+  }
+}
+
+input[type="radio"]:checked + label.yellow {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $yellow;
+  }
+}
+
+input[type="radio"]:checked + label.orange {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $orange;
+  }
+}
+
+input[type="radio"]:checked + label.purple {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $purple;
+  }
+}
+
+input[type="radio"]:checked + label.redOrange {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $redOrange;
+  }
+}
+
+input[type="radio"]:checked + label.green {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $green;
+  }
+}
+
+input[type="radio"]:checked + label.red {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $red;
+  }
+}
+
+input[type="radio"]:checked + label.blue {
+  color: $white;
+
+  &::after {
+    transform: translateX(0);
+    background-color: $blue;
+  }
+}
+
+label {
+  color: $sourceColor;
+  font-family: $league;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.5s ease;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    display: block;
+    top: 43px;
+    transform: translateX(-1000px);
+    transition: transform 0.5s ease;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .linearButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

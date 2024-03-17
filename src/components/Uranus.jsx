@@ -2,6 +2,7 @@ import ImgSection from "../core/ImgSection";
 import ButtonSection from "../core/ButtonSection";
 import InfoSection from "../core/InfoSection";
 import TextArea from "../core/TextArea";
+import LinearButtons from "../core/LinearButtons";
 import useSWR from "swr";
 import { useState } from "react";
 import "./Uranus.scss";
@@ -14,16 +15,24 @@ export default function Uranus() {
   const [secondaryImage, setSecondaryImage] = useState(null);
 
   const buttonStateHandler = (e) => {
-    setState(e);
-    if (e === "overview") {
+    if (e === "overviewLinear" || e === "overview") {
+      setState("overview");
+    }
+    if (e === "structureLinear" || e === "structure") {
+      setState("structure");
+    }
+    if (e === "geologyLinear" || e === "geology") {
+      setState("geology");
+    }
+    if (e === "overview" || e === "overviewLinear") {
       setImage(planets[6].images.planet);
       setSecondaryImage(null);
     }
-    if (e === "structure") {
+    if (e === "structure" || e === "structureLinear") {
       setImage(planets[6].images.internal);
       setSecondaryImage(null);
     }
-    if (e === "geology") {
+    if (e === "geology" || e === "geologyLinear") {
       setImage(planets[6].images.planet);
       setSecondaryImage(planets[6].images.geology);
     }
@@ -40,11 +49,18 @@ export default function Uranus() {
 
   return (
     <div className="uranus">
-      <ImgSection image={image} secondaryImage={secondaryImage} />
-      <div className="wrapper">
-        <TextArea planet={planets[6]} info={planets[6][state]} />
-        <ButtonSection buttonChange={buttonStateHandler} colorName={"green"} />
+      <LinearButtons buttonChange={buttonStateHandler} colorName={"green"} />
+      <div className="upperSection">
+        <ImgSection image={image} secondaryImage={secondaryImage} />
+        <div className="wrapperUranus">
+          <TextArea planet={planets[6]} info={planets[6][state]} />
+          <ButtonSection
+            buttonChange={buttonStateHandler}
+            colorName={"green"}
+          />
+        </div>
       </div>
+
       <InfoSection planet={planets[6]} />
     </div>
   );

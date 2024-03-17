@@ -43,3 +43,15 @@
     background-color: $blue;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .buttonSection {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .buttonSection {
+    display: none;
+  }
+}

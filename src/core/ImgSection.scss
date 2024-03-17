@@ -10,4 +10,25 @@
   img {
     background: transparent;
   }
+
+  .secondImage {
+    top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .imgSection {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .imgSection {
+    img {
+      width: 100%;
+    }
+    .secondImage {
+      top: 120px;
+    }
+  }
 }

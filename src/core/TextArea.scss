@@ -38,3 +38,28 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .textArea {
+    width: 50%;
+
+    h1 {
+      font-size: 68px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .textArea {
+    width: 100%;
+    text-align: center;
+
+    .source {
+      justify-content: center;
+    }
+  }
+}

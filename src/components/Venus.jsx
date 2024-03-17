@@ -2,6 +2,7 @@ import ImgSection from "../core/ImgSection";
 import ButtonSection from "../core/ButtonSection";
 import InfoSection from "../core/InfoSection";
 import TextArea from "../core/TextArea";
+import LinearButtons from "../core/LinearButtons";
 import useSWR from "swr";
 import { useState } from "react";
 import "./Venus.scss";
@@ -14,16 +15,24 @@ export default function Venus() {
   const [secondaryImage, setSecondaryImage] = useState(null);
 
   const buttonStateHandler = (e) => {
-    setState(e);
-    if (e === "overview") {
+    if (e === "overviewLinear" || e === "overview") {
+      setState("overview");
+    }
+    if (e === "structureLinear" || e === "structure") {
+      setState("structure");
+    }
+    if (e === "geologyLinear" || e === "geology") {
+      setState("geology");
+    }
+    if (e === "overview" || e === "overviewLinear") {
       setImage(planets[1].images.planet);
       setSecondaryImage(null);
     }
-    if (e === "structure") {
+    if (e === "structure" || e === "structureLinear") {
       setImage(planets[1].images.internal);
       setSecondaryImage(null);
     }
-    if (e === "geology") {
+    if (e === "geology" || e === "geologyLinear") {
       setImage(planets[1].images.planet);
       setSecondaryImage(planets[1].images.geology);
     }
@@ -40,10 +49,16 @@ export default function Venus() {
 
   return (
     <div className="venus">
-      <ImgSection image={image} secondaryImage={secondaryImage} />
-      <div className="wrapper">
-        <TextArea planet={planets[1]} info={planets[1][state]} />
-        <ButtonSection buttonChange={buttonStateHandler} colorName={"yellow"} />
+      <LinearButtons buttonChange={buttonStateHandler} colorName={"yellow"} />
+      <div className="upperSection">
+        <ImgSection image={image} secondaryImage={secondaryImage} />
+        <div className="wrapperVenus">
+          <TextArea planet={planets[1]} info={planets[1][state]} />
+          <ButtonSection
+            buttonChange={buttonStateHandler}
+            colorName={"yellow"}
+          />
+        </div>
       </div>
       <InfoSection planet={planets[1]} />
     </div>

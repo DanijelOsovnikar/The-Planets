@@ -1,0 +1,44 @@
+@import "../vars/vars";
+@import "../vars/mixin";
+
+.sidebar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.router {
+  width: 90%;
+
+  @for $i from 1 to length($colors) {
+    .link:nth-of-type(#{$i}) .circle {
+      $color-from-list: nth($colors, $i);
+      background-color: $color-from-list;
+    }
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba($color: $buttonBorderColor, $alpha: 0.3);
+
+    .linkWrapper {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      .circle {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+      }
+
+      a {
+        margin: 30px;
+      }
+    }
+  }
+}
