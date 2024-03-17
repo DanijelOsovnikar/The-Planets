@@ -42,7 +42,7 @@ export default function Neptune() {
     data: planets,
     error,
     isValidating,
-  } = useSWR("src/data.json", fetcher);
+  } = useSWR("public/assets/data.json", fetcher);
 
   if (error) return <div className="failed">failed to load</div>;
   if (isValidating) return <div className="Loading">Loading...</div>;

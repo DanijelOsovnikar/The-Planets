@@ -1,6 +1,6 @@
 import "./App.scss";
 import { useState } from "react";
-import { Routes, Route, HashRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Sidebar from "./core/Sidebar.jsx";
 
@@ -23,25 +23,23 @@ function App() {
 
   return (
     <div className="app">
-      <HashRouter>
-        <Navbar showSideBar={sidebarFunction} />
-        <Sidebar openSidebar={sidebarShow} sidebarFucntion={sidebarFunction} />
-        {!sidebarShow ? (
-          <main>
-            <Routes>
-              <Route path="/" element={<Mercury />} />
-              <Route path="/mercury" element={<Mercury />} />
-              <Route path="/venus" element={<Venus />} />
-              <Route path="/earth" element={<Earth />} />
-              <Route path="/mars" element={<Mars />} />
-              <Route path="/jupiter" element={<Jupiter />} />
-              <Route path="/saturn" element={<Saturn />} />
-              <Route path="/uranus" element={<Uranus />} />
-              <Route path="/neptune" element={<Neptune />} />
-            </Routes>
-          </main>
-        ) : null}
-      </HashRouter>
+      <Navbar showSideBar={sidebarFunction} />
+      <Sidebar openSidebar={sidebarShow} sidebarFucntion={sidebarFunction} />
+      {!sidebarShow ? (
+        <main>
+          <Routes>
+            <Route path="/" element={<Mercury />} />
+            <Route path="/mercury" element={<Mercury />} />
+            <Route path="/venus" element={<Venus />} />
+            <Route path="/earth" element={<Earth />} />
+            <Route path="/mars" element={<Mars />} />
+            <Route path="/jupiter" element={<Jupiter />} />
+            <Route path="/saturn" element={<Saturn />} />
+            <Route path="/uranus" element={<Uranus />} />
+            <Route path="/neptune" element={<Neptune />} />
+          </Routes>
+        </main>
+      ) : null}
     </div>
   );
 }
