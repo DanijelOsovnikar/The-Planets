@@ -28,9 +28,9 @@ function App() {
       {!sidebarShow ? (
         <main>
           <Routes>
-            <Route path="/" element={<Mercury />} />
-            <Route path="/mercury" element={<Mercury />} />
-            <Route path="/venus" element={<Venus />} />
+            <Route path="/The-Planets/" element={<Mercury />} />
+            <Route path="/The-Planets//mercury" element={<Mercury />} />
+            <Route path="/The-Planets//venus" element={<Venus />} />
             <Route path="/earth" element={<Earth />} />
             <Route path="/mars" element={<Mars />} />
             <Route path="/jupiter" element={<Jupiter />} />
