@@ -28,15 +28,15 @@ function App() {
       {!sidebarShow ? (
         <main>
           <Routes>
-            <Route path="/The-Planets/" element={<Mercury />} />
-            <Route path="/The-Planets/mercury" element={<Mercury />} />
-            <Route path="/The-Planets/venus" element={<Venus />} />
-            <Route path="/The-Planets/earth" element={<Earth />} />
-            <Route path="/The-Planets/mars" element={<Mars />} />
-            <Route path="/The-Planets/jupiter" element={<Jupiter />} />
-            <Route path="/The-Planets/saturn" element={<Saturn />} />
-            <Route path="/The-Planets/uranus" element={<Uranus />} />
-            <Route path="/The-Planets/neptune" element={<Neptune />} />
+            <Route path="/" element={<Mercury />} />
+            <Route path="/mercury" element={<Mercury />} />
+            <Route path="/venus" element={<Venus />} />
+            <Route path="/earth" element={<Earth />} />
+            <Route path="/mars" element={<Mars />} />
+            <Route path="/jupiter" element={<Jupiter />} />
+            <Route path="/saturn" element={<Saturn />} />
+            <Route path="/uranus" element={<Uranus />} />
+            <Route path="/neptune" element={<Neptune />} />
           </Routes>
         </main>
       ) : null}

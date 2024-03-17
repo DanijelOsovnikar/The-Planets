@@ -13,35 +13,35 @@ export default function Navbar({ showSideBar }) {
           THE PLANETS
         </Link>
         <img
-          src="src/assets/icon-hamburger.svg"
+          src="assets/icon-hamburger.svg"
           alt="hamburgerImg"
           id="hamMenu"
           onClick={sidebarHandler}
         />
         <ul style={{ color: "white" }}>
           <li>
-            <Link to={"/The-Planets/mercury"}>Mercury</Link>
+            <Link to={"/mercury"}>Mercury</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/venus"}>Venus</Link>
+            <Link to={"/venus"}>Venus</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/earth"}>Earth</Link>
+            <Link to={"/earth"}>Earth</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/mars"}>Mars</Link>
+            <Link to={"/mars"}>Mars</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/jupiter"}>Jupiter</Link>
+            <Link to={"/jupiter"}>Jupiter</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/saturn"}>Saturn</Link>
+            <Link to={"/saturn"}>Saturn</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/uranus"}>Uranus</Link>
+            <Link to={"/uranus"}>Uranus</Link>
           </li>
           <li>
-            <Link to={"/The-Planets/neptune"}>Neptune</Link>
+            <Link to={"/neptune"}>Neptune</Link>
           </li>
         </ul>
       </nav>

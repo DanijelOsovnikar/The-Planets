@@ -17,7 +17,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Mercury
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -26,7 +26,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Venus
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -35,7 +35,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Earth
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -44,7 +44,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Mars
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -53,7 +53,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Jupiter
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -62,7 +62,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Saturn
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -71,7 +71,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Uranus
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
           <div className="link">
             <div className="linkWrapper">
@@ -80,7 +80,7 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
                 Neptune
               </Link>
             </div>
-            <img src="src/assets/icon-chevron.svg" />
+            <img src="assets/icon-chevron.svg" />
           </div>
         </div>
       ) : null}
