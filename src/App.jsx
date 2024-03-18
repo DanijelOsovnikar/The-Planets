@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
 import Sidebar from "./core/Sidebar.jsx";
+import { useSpring, animated } from "@react-spring/web";
 
 //Pages
 import Mercury from "./components/Mercury.jsx";
@@ -21,12 +22,20 @@ function App() {
     setSidebarShow(!sidebarShow);
   };
 
+  const animationProp = useSpring({
+    transform: sidebarShow ? "translateX(1000px)" : "translateX(0)",
+  });
+
   return (
     <div className="app">
       <Navbar showSideBar={sidebarFunction} />
-      <Sidebar openSidebar={sidebarShow} sidebarFucntion={sidebarFunction} />
+      <Sidebar
+        // style={springProps}
+        openSidebar={sidebarShow}
+        sidebarFucntion={sidebarFunction}
+      />
       {!sidebarShow ? (
-        <main>
+        <animated.main style={animationProp}>
           <Routes>
             <Route path="/" element={<Mercury />} />
             <Route path="/mercury" element={<Mercury />} />
@@ -38,7 +47,7 @@ function App() {
             <Route path="/uranus" element={<Uranus />} />
             <Route path="/neptune" element={<Neptune />} />
           </Routes>
-        </main>
+        </animated.main>
       ) : null}
     </div>
   );

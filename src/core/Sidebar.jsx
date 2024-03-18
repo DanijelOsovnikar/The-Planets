@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { animated, useSpring } from "@react-spring/web";
 import "./Sidebar.scss";
 
 export default function Sidebar({ openSidebar, sidebarFucntion }) {
@@ -6,8 +7,12 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
     sidebarFucntion();
   };
 
+  const animation = useSpring({
+    transform: !openSidebar ? "translateX(-1000px)" : "translateX(0)",
+  });
+
   return (
-    <div className="sidebar">
+    <animated.div className="sidebar" style={animation}>
       {openSidebar ? (
         <div className="router">
           <div className="link">
@@ -84,6 +89,6 @@ export default function Sidebar({ openSidebar, sidebarFucntion }) {
           </div>
         </div>
       ) : null}
-    </div>
+    </animated.div>
   );
 }
